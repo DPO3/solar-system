@@ -29,7 +29,7 @@ body {
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(248,255,138,1) 100%);
     animation: orbit 100s linear infinite;
     box-shadow: 0 0 30px sandybrown;
-    --size: 110px;
+    --size: 120px;
 }
 
 @keyframes orbit {  
@@ -70,7 +70,7 @@ to {
 }
 
 .saturn {
-    --size: 90px;
+    --size: 80px;
     --push: 450px;
     background: linear-gradient(#FFF7CA, #DDD593, #FFF7CA);
     animation: orbit 19s linear infinite;
@@ -120,7 +120,7 @@ to {
 }
 
 .jupiter {
-    --size: 90px;
+    --size: 80px;
     --push: 580px;
     background: linear-gradient(30deg, #855120, #fd8d6a);
     animation: orbit 14s linear infinite;
