@@ -1,0 +1,134 @@
+* { 
+    padding: 0;
+    margin: 0;
+
+}
+body {  
+    background-image: url('https://wide-w.com/wp-content/uploads/2018/09/zvezdy-4k-ultra-hd-1920x1080.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.planet,
+.star { 
+    --size: 100px;
+    --push: 0px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - var(--size) / 2);
+    left: calc(50% - var(--size) / 2);
+}
+
+.sun {  
+    background: linear-gradient(45deg, #FDAE82, #EDFB98);
+    animation: orbit 1s linear infinite;
+}
+
+@keyframes orbit {  
+from {
+    transform: rotate(0) translateX(var(--push));
+}
+
+to {    
+    transform: rotate(360deg) translateX(var(--push));
+}
+}
+
+.earth {
+    --size: 40px;
+    --push: 300px;
+    background: linear-gradient(#66FDAC, #8CFB79);
+    animation: orbit 10.5s linear infinite;
+}
+
+.earth::before {
+    content: '';
+    display: block;
+    --size: 10px;
+    --push: 40px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - var(--size) / 2);
+    left: calc(50% - var(--size) / 2);
+    background: linear-gradient(45deg, #A5A5A5, #7E7E7E);
+    animation: orbit 10s linear infinite;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
+}
+
+.saturn {
+    --size: 90px;
+    --push: 450px;
+    background: linear-gradient(#FFF7CA, #DDD593, #FFF7CA);
+    animation: orbit 19s linear infinite;
+}
+
+.saturn:after {
+    content: "";
+    width: 140%;
+    height: 10px;
+    border: 2px solid lightsalmon;
+    border-top: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(10deg);
+}
+
+.mars {    
+    --size: 20px;
+    --push: 240px;
+    background: linear-gradient(#FF542F, #DD2424, #FF542F);
+    animation: orbit 14s linear infinite; /*#FFD15A */
+}
+
+.venus {
+    --size: 45px;
+    --push: 230px;
+    background: linear-gradient(75deg, #FFD15A, #DD9138, #FFD15A);
+    animation: orbit 9s linear infinite;
+    top: calc(50% - var(--size) / 2);
+    left: calc(50% - var(--size) / 2);
+}
+
+.mercury {
+    --size: 35px;
+    --push: 150px;
+    background: linear-gradient(30deg, #FF9534, #A25036);
+    animation: orbit 9s linear infinite;
+    top: calc(50% - var(--size) / 2);
+    left: calc(50% - var(--size) / 2);
+}
+
+.jupiter {
+    --size: 90px;
+    --push: 580px;
+    background: linear-gradient(30deg, #855120, #fd8d6a);
+    animation: orbit 14s linear infinite;
+    top: calc(50% - var(--size) / 2);
+    left: calc(50% - var(--size) / 2);
+}
+
+.uranus {
+    --size: 30px;
+    --push: 640px;
+    background: linear-gradient(#39AAEA, #846AEA, #39AAEA);
+    animation: orbit 17s linear infinite;
+    top: calc(50% - var(--size) / 2);
+    left: calc(50% - var(--size) / 2);
+}
+
+.neptune {
+    --size: 20px;
+    --push: 690px;
+    background: linear-gradient(#42668a, #1f1545, );
+    animation: orbit 11s linear infinite;
+}
