@@ -4,10 +4,10 @@
 
 }
 body {  
-    background-image: url('https://wide-w.com/wp-content/uploads/2018/09/zvezdy-4k-ultra-hd-1920x1080.jpg');
+    /*background-image: url('https://damion.club/uploads/posts/2022-01/1641343439_1-damion-club-p-fon-dlya-prezentatsii-kosmos-1.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
     overflow: hidden;
     width: 100vw;
     height: 100vh;
@@ -26,8 +26,10 @@ body {
 }
 
 .sun {  
-    background: linear-gradient(45deg, #FDAE82, #EDFB98);
-    animation: orbit 1s linear infinite;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(248,255,138,1) 100%);
+    animation: orbit 100s linear infinite;
+    box-shadow: 0 0 30px sandybrown;
+    --size: 110px;
 }
 
 @keyframes orbit {  
@@ -43,8 +45,11 @@ to {
 .earth {
     --size: 40px;
     --push: 300px;
-    background: linear-gradient(#66FDAC, #8CFB79);
+    /*background: linear-gradient(#66FDAC, #8CFB79);*/
+    background-image: url('https://sun9-32.userapi.com/impg/UTcsCqCmEehZ1fQ6p5c41ZmGyO_e3W47jxd-fw/52QxJdrIPbk.jpg?size=807x454&quality=96&sign=c904b0ce8f3fe75d939c6f019031c676&type=album');
     animation: orbit 10.5s linear infinite;
+    rotate: 0;
+    box-shadow: 0 0 10px #66dffd;
 }
 
 .earth::before {
@@ -59,6 +64,7 @@ to {
     top: calc(50% - var(--size) / 2);
     left: calc(50% - var(--size) / 2);
     background: linear-gradient(45deg, #A5A5A5, #7E7E7E);
+    box-shadow: 0 0 3px #808080;
     animation: orbit 10s linear infinite;
     filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
 }
@@ -68,25 +74,28 @@ to {
     --push: 450px;
     background: linear-gradient(#FFF7CA, #DDD593, #FFF7CA);
     animation: orbit 19s linear infinite;
+    box-shadow: 0 0 10px rgb(173, 134, 119);
 }
 
 .saturn:after {
     content: "";
     width: 140%;
-    height: 10px;
-    border: 2px solid lightsalmon;
+    height: 19px;
+    border: 7px solid rgb(173, 134, 119);
     border-top: 0;
+    box-shadow: 0 0 30px rgb(173, 134, 119);
     border-radius: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(10deg);
+    transform: translate(-50%, -50%) rotate(30deg);
 }
 
 .mars {    
     --size: 20px;
-    --push: 240px;
+    --push: 190px;
     background: linear-gradient(#FF542F, #DD2424, #FF542F);
+    box-shadow: 0 0 5px #FF542F;
     animation: orbit 14s linear infinite; /*#FFD15A */
 }
 
@@ -94,6 +103,7 @@ to {
     --size: 45px;
     --push: 230px;
     background: linear-gradient(75deg, #FFD15A, #DD9138, #FFD15A);
+    box-shadow: 0 0 7px #ff522c;
     animation: orbit 9s linear infinite;
     top: calc(50% - var(--size) / 2);
     left: calc(50% - var(--size) / 2);
@@ -103,6 +113,7 @@ to {
     --size: 35px;
     --push: 150px;
     background: linear-gradient(30deg, #FF9534, #A25036);
+    box-shadow: 0 0 7px #ad5642;
     animation: orbit 9s linear infinite;
     top: calc(50% - var(--size) / 2);
     left: calc(50% - var(--size) / 2);
@@ -115,20 +126,35 @@ to {
     animation: orbit 14s linear infinite;
     top: calc(50% - var(--size) / 2);
     left: calc(50% - var(--size) / 2);
+    box-shadow: 0 0 7px #ff522c;
 }
 
 .uranus {
     --size: 30px;
-    --push: 640px;
+    --push: 660px;
     background: linear-gradient(#39AAEA, #846AEA, #39AAEA);
     animation: orbit 17s linear infinite;
     top: calc(50% - var(--size) / 2);
     left: calc(50% - var(--size) / 2);
+    box-shadow: 0 0 7px #39AAEA;
 }
 
 .neptune {
-    --size: 20px;
-    --push: 690px;
-    background: linear-gradient(#42668a, #1f1545, );
-    animation: orbit 11s linear infinite;
+    --size: 25px;
+    --push: 710px;
+    background: linear-gradient(#42668a, #1f1545);
+    animation: orbit 16s linear infinite;
+    box-shadow: 0 0 7px #1f1545;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
 }
