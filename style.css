@@ -114,7 +114,7 @@ to {
     --push: 150px;
     background: linear-gradient(30deg, #FF9534, #A25036);
     box-shadow: 0 0 7px #ad5642;
-    animation: orbit 9s linear infinite;
+    animation: orbit 12s linear infinite;
     top: calc(50% - var(--size) / 2);
     left: calc(50% - var(--size) / 2);
 }
